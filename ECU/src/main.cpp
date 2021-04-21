@@ -4,13 +4,14 @@
 
 /******** PID PARAMETERS ********/
 
-#define Kp 200.0        // Proportional gain
-#define Ki 15.0         // Integral gain 
-#define Kd 0.0          // Diferencial gain
-#define deadBand  40    // deadband spacing
-#define minError  0.035 // Minimum allowed error 
-#define xT 0.1          // INTERVAL(Seconds)
-#define INTERVAL 100000 // Interval (microseconds)
+#define Kp 200.0                // Proportional gain
+#define Ki 15.0                 // Integral gain 
+#define Kd 0.0                  // Diferencial gain
+#define deadBand  40            // deadband spacing
+#define minError  0.035         // Minimum allowed error 
+#define loop_frequency 50       // Hz
+#define xT 1/loop_frequency     // period in seconds
+#define loop_period 1000000*xT  // period in microseconds
 
 /********************************/
 
@@ -89,7 +90,6 @@ void setup()
 {
   Serial.begin(115200);
   SerialUSB.begin(115200);
-  
 
   pinMode(CSN1, OUTPUT);
   pinMode(CSN2, OUTPUT);
@@ -105,10 +105,22 @@ void setup()
   digitalWrite(dir1Pin, LOW);
   digitalWrite(dir2Pin, LOW);
 
-  delay(2000);
-
-  SerialUSB.println("Ready");
   SPI.begin(); // Start I2C Bus as Master
+
+  SerialUSB.println("Press ENTER.");
+  while(!SerialUSB.available()) ; // Hang program untill serial is connected
+
+  SerialUSB.println("Controller frequency: "+String(loop_frequency)+" Hz");
+  SerialUSB.println("Controller period: "+String(loop_period)+" us.");
+  SerialUSB.println("Controller gains:\nKp: "+String(Kp)+"\nKi: "+String(Ki)+"\nKd: "+String(Kd));
+  SerialUSB.println("Deadband: "+String(deadBand)+" PWM units.");
+  SerialUSB.println("Output minimum error: "+String(minError)+" radians.");
+  SerialUSB.println("Ready");
+
+  SerialUSB.println("Press ENTER to start.");
+  while(!SerialUSB.available()) ; // Hang program untill serial is connected
+  
+  delay(2000);
 }
 
 void loop()
@@ -116,7 +128,7 @@ void loop()
   // Timer to keep track of loop time
   long startTime = micros(); 
 
-  if(stateTimeElapsed >= 40){
+  if(stateTimeElapsed >= loop_frequency*3){ // At 50Hz 2*50Hz iterations results in 2s
     stateTimeElapsed = 0;
     switch(currentState){
       case Rest:
@@ -171,17 +183,18 @@ void loop()
 
   if(currentState == sineStateSlow){
     setpoint1 = (maxLim1-minLim1)*(sin(rad) + 1)*0.5+minLim1; 
-    rad = rad + 0.015;
+    rad = rad + 0.005;
   }
 
   if(currentState == sineStateFast){
     setpoint1 = (maxLim1-minLim1)*(sin(rad) + 1)*0.5+minLim1; 
-    rad = rad + 0.04;
+    rad = rad + 0.03;
   }
 
   
   // Read sensors
   position1 = readPosition(CSN1);
+  // speed1 = (position1 - u_position1)/xT;
 
   // Calculate errors
   error1 = setpoint1 - position1;
@@ -221,16 +234,17 @@ void loop()
   
   // Log data to serial
   Serial.println(String(setpoint1) + " " + String(setpoint1+minError) + " " + String(setpoint1-minError) + " " + String(position1)); // + " " + String(u1) + " " + String(motorSignal1));
-  SerialUSB.println(String(u1) + " " + String(error1)+ " " + String(integral1)+ " " + String(diff1));
+  // SerialUSB.print(String(u1) + " " + String(error1)+ " " + String(integral1)+ " " + String(diff1)+ " ");
 
   // Calculate elapsed time since loop started
   long elapsedTime = micros()-startTime;
+  // SerialUSB.println(String(elapsedTime));
 
-  if(elapsedTime<INTERVAL){
-    delayMicroseconds(INTERVAL-elapsedTime);
+  if(elapsedTime<loop_period){
+    delayMicroseconds(loop_period-elapsedTime);
     stateTimeElapsed++; // TEMPORARY 
   }else{
-    Serial.println("LOOOP IS FUCKED"); // Ideally it shoud not get here
+    SerialUSB.println("LOOOP IS FUCKED"); // Ideally it shoud not get here
   }
 } 
 
