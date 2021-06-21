@@ -44,10 +44,9 @@
 UART_HandleTypeDef huart2;
 DMA_HandleTypeDef hdma_usart2_rx;
 
+/* USER CODE BEGIN PV */
 char buffRX[DATA_SIZE] = {0};
 char buffTX[] = "Hello World\r\n";
-
-/* USER CODE BEGIN PV */
 
 /* USER CODE END PV */
 

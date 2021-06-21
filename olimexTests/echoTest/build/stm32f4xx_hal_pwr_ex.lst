@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccFkm3fk.s 			page 1
+ARM GAS  /tmp/cchkDobI.s 			page 1
 
 
    1              		.cpu cortex-m4
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
   29:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   */
   30:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** 
   31:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** /** @defgroup PWREx PWREx
-ARM GAS  /tmp/ccFkm3fk.s 			page 2
+ARM GAS  /tmp/cchkDobI.s 			page 2
 
 
   32:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @brief PWR HAL module driver
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
   86:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           the Flash interface when a protection level change from level 1 to 
   87:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           level 0 is requested. 
   88:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****       -@- Refer to the description of Read protection (RDP) in the Flash 
-ARM GAS  /tmp/ccFkm3fk.s 			page 3
+ARM GAS  /tmp/cchkDobI.s 			page 3
 
 
   89:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****           programming manual.
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  143:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** HAL_StatusTypeDef HAL_PWREx_EnableBkUpReg(void)
  144:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** {
   28              		.loc 1 144 0
-ARM GAS  /tmp/ccFkm3fk.s 			page 4
+ARM GAS  /tmp/cchkDobI.s 			page 4
 
 
   29              		.cfi_startproc
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
   65              		.loc 1 160 0
   66 0028 0020     		movs	r0, #0
   67 002a 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccFkm3fk.s 			page 5
+ARM GAS  /tmp/cchkDobI.s 			page 5
 
 
   68              	.LVL5:
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  108 000e 084B     		ldr	r3, .L17+4
  109 0010 5B68     		ldr	r3, [r3, #4]
  110 0012 13F0080F 		tst	r3, #8
-ARM GAS  /tmp/ccFkm3fk.s 			page 6
+ARM GAS  /tmp/cchkDobI.s 			page 6
 
 
  111 0016 07D0     		beq	.L16
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  193:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   *(__IO uint32_t *) CR_FPDS_BB = (uint32_t)ENABLE;
  151              		.loc 1 193 0
  152 0000 0122     		movs	r2, #1
-ARM GAS  /tmp/ccFkm3fk.s 			page 7
+ARM GAS  /tmp/cchkDobI.s 			page 7
 
 
  153 0002 014B     		ldr	r3, .L20
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  205:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c **** /**
  206:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @brief Return Voltage Scaling Range.
  207:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   * @retval The configured scale for the regulator voltage(VOS bit field).
-ARM GAS  /tmp/ccFkm3fk.s 			page 8
+ARM GAS  /tmp/cchkDobI.s 			page 8
 
 
  208:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   *         The returned value can be one of the following:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  228              		.loc 1 235 0
  229              		.cfi_startproc
  230              		@ args = 0, pretend = 0, frame = 8
-ARM GAS  /tmp/ccFkm3fk.s 			page 9
+ARM GAS  /tmp/cchkDobI.s 			page 9
 
 
  231              		@ frame_needed = 0, uses_anonymous_args = 0
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  273              	.LVL16:
  274              	.L29:
  248:Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c ****   while((__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY) == RESET))
-ARM GAS  /tmp/ccFkm3fk.s 			page 10
+ARM GAS  /tmp/cchkDobI.s 			page 10
 
 
  275              		.loc 1 248 0
@@ -592,29 +592,29 @@ ARM GAS  /tmp/ccFkm3fk.s 			page 1
  315              		.file 7 "Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h"
  316              		.file 8 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_def.h"
  317              		.file 9 "Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h"
-ARM GAS  /tmp/ccFkm3fk.s 			page 11
+ARM GAS  /tmp/cchkDobI.s 			page 11
 
 
 DEFINED SYMBOLS
                             *ABS*:0000000000000000 stm32f4xx_hal_pwr_ex.c
-     /tmp/ccFkm3fk.s:18     .text.HAL_PWREx_EnableBkUpReg:0000000000000000 $t
-     /tmp/ccFkm3fk.s:25     .text.HAL_PWREx_EnableBkUpReg:0000000000000000 HAL_PWREx_EnableBkUpReg
-     /tmp/ccFkm3fk.s:72     .text.HAL_PWREx_EnableBkUpReg:000000000000002c $d
-     /tmp/ccFkm3fk.s:78     .text.HAL_PWREx_DisableBkUpReg:0000000000000000 $t
-     /tmp/ccFkm3fk.s:85     .text.HAL_PWREx_DisableBkUpReg:0000000000000000 HAL_PWREx_DisableBkUpReg
-     /tmp/ccFkm3fk.s:131    .text.HAL_PWREx_DisableBkUpReg:000000000000002c $d
-     /tmp/ccFkm3fk.s:137    .text.HAL_PWREx_EnableFlashPowerDown:0000000000000000 $t
-     /tmp/ccFkm3fk.s:144    .text.HAL_PWREx_EnableFlashPowerDown:0000000000000000 HAL_PWREx_EnableFlashPowerDown
-     /tmp/ccFkm3fk.s:159    .text.HAL_PWREx_EnableFlashPowerDown:0000000000000008 $d
-     /tmp/ccFkm3fk.s:164    .text.HAL_PWREx_DisableFlashPowerDown:0000000000000000 $t
-     /tmp/ccFkm3fk.s:171    .text.HAL_PWREx_DisableFlashPowerDown:0000000000000000 HAL_PWREx_DisableFlashPowerDown
-     /tmp/ccFkm3fk.s:186    .text.HAL_PWREx_DisableFlashPowerDown:0000000000000008 $d
-     /tmp/ccFkm3fk.s:191    .text.HAL_PWREx_GetVoltageRange:0000000000000000 $t
-     /tmp/ccFkm3fk.s:198    .text.HAL_PWREx_GetVoltageRange:0000000000000000 HAL_PWREx_GetVoltageRange
-     /tmp/ccFkm3fk.s:214    .text.HAL_PWREx_GetVoltageRange:000000000000000c $d
-     /tmp/ccFkm3fk.s:219    .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 $t
-     /tmp/ccFkm3fk.s:226    .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 HAL_PWREx_ControlVoltageScaling
-     /tmp/ccFkm3fk.s:303    .text.HAL_PWREx_ControlVoltageScaling:000000000000005c $d
+     /tmp/cchkDobI.s:18     .text.HAL_PWREx_EnableBkUpReg:0000000000000000 $t
+     /tmp/cchkDobI.s:25     .text.HAL_PWREx_EnableBkUpReg:0000000000000000 HAL_PWREx_EnableBkUpReg
+     /tmp/cchkDobI.s:72     .text.HAL_PWREx_EnableBkUpReg:000000000000002c $d
+     /tmp/cchkDobI.s:78     .text.HAL_PWREx_DisableBkUpReg:0000000000000000 $t
+     /tmp/cchkDobI.s:85     .text.HAL_PWREx_DisableBkUpReg:0000000000000000 HAL_PWREx_DisableBkUpReg
+     /tmp/cchkDobI.s:131    .text.HAL_PWREx_DisableBkUpReg:000000000000002c $d
+     /tmp/cchkDobI.s:137    .text.HAL_PWREx_EnableFlashPowerDown:0000000000000000 $t
+     /tmp/cchkDobI.s:144    .text.HAL_PWREx_EnableFlashPowerDown:0000000000000000 HAL_PWREx_EnableFlashPowerDown
+     /tmp/cchkDobI.s:159    .text.HAL_PWREx_EnableFlashPowerDown:0000000000000008 $d
+     /tmp/cchkDobI.s:164    .text.HAL_PWREx_DisableFlashPowerDown:0000000000000000 $t
+     /tmp/cchkDobI.s:171    .text.HAL_PWREx_DisableFlashPowerDown:0000000000000000 HAL_PWREx_DisableFlashPowerDown
+     /tmp/cchkDobI.s:186    .text.HAL_PWREx_DisableFlashPowerDown:0000000000000008 $d
+     /tmp/cchkDobI.s:191    .text.HAL_PWREx_GetVoltageRange:0000000000000000 $t
+     /tmp/cchkDobI.s:198    .text.HAL_PWREx_GetVoltageRange:0000000000000000 HAL_PWREx_GetVoltageRange
+     /tmp/cchkDobI.s:214    .text.HAL_PWREx_GetVoltageRange:000000000000000c $d
+     /tmp/cchkDobI.s:219    .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 $t
+     /tmp/cchkDobI.s:226    .text.HAL_PWREx_ControlVoltageScaling:0000000000000000 HAL_PWREx_ControlVoltageScaling
+     /tmp/cchkDobI.s:303    .text.HAL_PWREx_ControlVoltageScaling:000000000000005c $d
                      .debug_frame:0000000000000010 $d
 
 UNDEFINED SYMBOLS

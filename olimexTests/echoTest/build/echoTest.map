@@ -70,7 +70,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build/stm32f4xx_hal_tim.o
  .debug_line    0x0000000000000000      0x10a build/stm32f4xx_hal_tim.o
- .debug_str     0x0000000000000000      0x277 build/stm32f4xx_hal_tim.o
+ .debug_str     0x0000000000000000      0x279 build/stm32f4xx_hal_tim.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_tim.o
  .ARM.attributes
                 0x0000000000000000       0x39 build/stm32f4xx_hal_tim.o
@@ -82,7 +82,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build/stm32f4xx_hal_tim_ex.o
  .debug_line    0x0000000000000000      0x10a build/stm32f4xx_hal_tim_ex.o
- .debug_str     0x0000000000000000      0x27a build/stm32f4xx_hal_tim_ex.o
+ .debug_str     0x0000000000000000      0x27c build/stm32f4xx_hal_tim_ex.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_tim_ex.o
  .ARM.attributes
                 0x0000000000000000       0x39 build/stm32f4xx_hal_tim_ex.o
@@ -224,7 +224,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/stm32f4xx_hal_rcc_ex.o
  .debug_ranges  0x0000000000000000       0x38 build/stm32f4xx_hal_rcc_ex.o
  .debug_line    0x0000000000000000      0x2a9 build/stm32f4xx_hal_rcc_ex.o
- .debug_str     0x0000000000000000      0x54d build/stm32f4xx_hal_rcc_ex.o
+ .debug_str     0x0000000000000000      0x54f build/stm32f4xx_hal_rcc_ex.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_rcc_ex.o
  .debug_frame   0x0000000000000000       0xb4 build/stm32f4xx_hal_rcc_ex.o
  .ARM.attributes
@@ -273,7 +273,7 @@ Discarded input sections
                 0x0000000000000000       0xa0 build/stm32f4xx_hal_flash.o
  .debug_ranges  0x0000000000000000       0x90 build/stm32f4xx_hal_flash.o
  .debug_line    0x0000000000000000      0x3be build/stm32f4xx_hal_flash.o
- .debug_str     0x0000000000000000      0x5eb build/stm32f4xx_hal_flash.o
+ .debug_str     0x0000000000000000      0x5ed build/stm32f4xx_hal_flash.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_flash.o
  .debug_frame   0x0000000000000000      0x17c build/stm32f4xx_hal_flash.o
  .ARM.attributes
@@ -321,7 +321,7 @@ Discarded input sections
                 0x0000000000000000       0x98 build/stm32f4xx_hal_flash_ex.o
  .debug_ranges  0x0000000000000000       0x88 build/stm32f4xx_hal_flash_ex.o
  .debug_line    0x0000000000000000      0x385 build/stm32f4xx_hal_flash_ex.o
- .debug_str     0x0000000000000000      0x63b build/stm32f4xx_hal_flash_ex.o
+ .debug_str     0x0000000000000000      0x63d build/stm32f4xx_hal_flash_ex.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_flash_ex.o
  .debug_frame   0x0000000000000000      0x184 build/stm32f4xx_hal_flash_ex.o
  .ARM.attributes
@@ -334,7 +334,7 @@ Discarded input sections
  .debug_aranges
                 0x0000000000000000       0x18 build/stm32f4xx_hal_flash_ramfunc.o
  .debug_line    0x0000000000000000      0x10a build/stm32f4xx_hal_flash_ramfunc.o
- .debug_str     0x0000000000000000      0x281 build/stm32f4xx_hal_flash_ramfunc.o
+ .debug_str     0x0000000000000000      0x283 build/stm32f4xx_hal_flash_ramfunc.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_flash_ramfunc.o
  .ARM.attributes
                 0x0000000000000000       0x39 build/stm32f4xx_hal_flash_ramfunc.o
@@ -369,7 +369,7 @@ Discarded input sections
                 0x0000000000000000       0x38 build/stm32f4xx_hal_dma_ex.o
  .debug_ranges  0x0000000000000000       0x28 build/stm32f4xx_hal_dma_ex.o
  .debug_line    0x0000000000000000      0x83d build/stm32f4xx_hal_dma_ex.o
- .debug_str     0x0000000000000000      0x5fc build/stm32f4xx_hal_dma_ex.o
+ .debug_str     0x0000000000000000      0x5fe build/stm32f4xx_hal_dma_ex.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_dma_ex.o
  .debug_frame   0x0000000000000000       0x80 build/stm32f4xx_hal_dma_ex.o
  .ARM.attributes
@@ -439,7 +439,7 @@ Discarded input sections
                 0x0000000000000000       0xa0 build/stm32f4xx_hal_pwr.o
  .debug_ranges  0x0000000000000000       0x90 build/stm32f4xx_hal_pwr.o
  .debug_line    0x0000000000000000      0x2c2 build/stm32f4xx_hal_pwr.o
- .debug_str     0x0000000000000000      0x5e2 build/stm32f4xx_hal_pwr.o
+ .debug_str     0x0000000000000000      0x5e4 build/stm32f4xx_hal_pwr.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_pwr.o
  .debug_frame   0x0000000000000000      0x13c build/stm32f4xx_hal_pwr.o
  .ARM.attributes
@@ -466,7 +466,7 @@ Discarded input sections
                 0x0000000000000000       0x48 build/stm32f4xx_hal_pwr_ex.o
  .debug_ranges  0x0000000000000000       0x38 build/stm32f4xx_hal_pwr_ex.o
  .debug_line    0x0000000000000000      0x1f6 build/stm32f4xx_hal_pwr_ex.o
- .debug_str     0x0000000000000000      0x4a5 build/stm32f4xx_hal_pwr_ex.o
+ .debug_str     0x0000000000000000      0x4a7 build/stm32f4xx_hal_pwr_ex.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_pwr_ex.o
  .debug_frame   0x0000000000000000       0x98 build/stm32f4xx_hal_pwr_ex.o
  .ARM.attributes
@@ -577,7 +577,7 @@ Discarded input sections
                 0x0000000000000000       0x60 build/stm32f4xx_hal_exti.o
  .debug_ranges  0x0000000000000000       0x50 build/stm32f4xx_hal_exti.o
  .debug_line    0x0000000000000000      0x2c0 build/stm32f4xx_hal_exti.o
- .debug_str     0x0000000000000000      0x494 build/stm32f4xx_hal_exti.o
+ .debug_str     0x0000000000000000      0x496 build/stm32f4xx_hal_exti.o
  .comment       0x0000000000000000       0x32 build/stm32f4xx_hal_exti.o
  .debug_frame   0x0000000000000000       0xfc build/stm32f4xx_hal_exti.o
  .ARM.attributes
@@ -1246,41 +1246,41 @@ OUTPUT(build/echoTest.elf elf32-littlearm)
  .comment       0x0000000000000031       0x32 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
  .comment       0x0000000000000031       0x32 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/crtend.o
 
-.debug_info     0x0000000000000000     0x9fb5
- .debug_info    0x0000000000000000     0x1aaa build/main.o
- .debug_info    0x0000000000001aaa      0x529 build/stm32f4xx_it.o
- .debug_info    0x0000000000001fd3      0xb26 build/stm32f4xx_hal_msp.o
- .debug_info    0x0000000000002af9     0x1c0a build/stm32f4xx_hal_uart.o
- .debug_info    0x0000000000004703      0xb7a build/stm32f4xx_hal_rcc.o
- .debug_info    0x000000000000527d      0x875 build/stm32f4xx_hal_gpio.o
- .debug_info    0x0000000000005af2      0xb46 build/stm32f4xx_hal_dma.o
- .debug_info    0x0000000000006638     0x1076 build/stm32f4xx_hal_cortex.o
- .debug_info    0x00000000000076ae      0xad5 build/stm32f4xx_hal.o
- .debug_info    0x0000000000008183      0x5de build/system_stm32f4xx.o
- .debug_info    0x0000000000008761       0x68 build/startup_stm32f407xx.o
- .debug_info    0x00000000000087c9      0x110 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_info    0x00000000000088d9      0x916 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .debug_info    0x00000000000091ef       0xcf /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_info    0x00000000000092be      0xc24 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
- .debug_info    0x0000000000009ee2       0xd3 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+.debug_info     0x0000000000000000     0x96d6
+ .debug_info    0x0000000000000000     0x11c9 build/main.o
+ .debug_info    0x00000000000011c9      0x529 build/stm32f4xx_it.o
+ .debug_info    0x00000000000016f2      0xb26 build/stm32f4xx_hal_msp.o
+ .debug_info    0x0000000000002218     0x1c0a build/stm32f4xx_hal_uart.o
+ .debug_info    0x0000000000003e22      0xb7a build/stm32f4xx_hal_rcc.o
+ .debug_info    0x000000000000499c      0x875 build/stm32f4xx_hal_gpio.o
+ .debug_info    0x0000000000005211      0xb46 build/stm32f4xx_hal_dma.o
+ .debug_info    0x0000000000005d57     0x1076 build/stm32f4xx_hal_cortex.o
+ .debug_info    0x0000000000006dcd      0xad5 build/stm32f4xx_hal.o
+ .debug_info    0x00000000000078a2      0x5de build/system_stm32f4xx.o
+ .debug_info    0x0000000000007e80       0x6a build/startup_stm32f407xx.o
+ .debug_info    0x0000000000007eea      0x110 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_info    0x0000000000007ffa      0x916 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_info    0x0000000000008910       0xcf /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x00000000000089df      0xc24 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_info    0x0000000000009603       0xd3 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
 
-.debug_abbrev   0x0000000000000000     0x1a8a
- .debug_abbrev  0x0000000000000000      0x2c2 build/main.o
- .debug_abbrev  0x00000000000002c2      0x177 build/stm32f4xx_it.o
- .debug_abbrev  0x0000000000000439      0x1b9 build/stm32f4xx_hal_msp.o
- .debug_abbrev  0x00000000000005f2      0x2e4 build/stm32f4xx_hal_uart.o
- .debug_abbrev  0x00000000000008d6      0x28b build/stm32f4xx_hal_rcc.o
- .debug_abbrev  0x0000000000000b61      0x21a build/stm32f4xx_hal_gpio.o
- .debug_abbrev  0x0000000000000d7b      0x2aa build/stm32f4xx_hal_dma.o
- .debug_abbrev  0x0000000000001025      0x33b build/stm32f4xx_hal_cortex.o
- .debug_abbrev  0x0000000000001360      0x1eb build/stm32f4xx_hal.o
- .debug_abbrev  0x000000000000154b      0x128 build/system_stm32f4xx.o
- .debug_abbrev  0x0000000000001673       0x12 build/startup_stm32f407xx.o
- .debug_abbrev  0x0000000000001685       0xba /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_abbrev  0x000000000000173f      0x197 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .debug_abbrev  0x00000000000018d6       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_abbrev  0x00000000000018ea      0x18c /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
- .debug_abbrev  0x0000000000001a76       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+.debug_abbrev   0x0000000000000000     0x1a17
+ .debug_abbrev  0x0000000000000000      0x24f build/main.o
+ .debug_abbrev  0x000000000000024f      0x177 build/stm32f4xx_it.o
+ .debug_abbrev  0x00000000000003c6      0x1b9 build/stm32f4xx_hal_msp.o
+ .debug_abbrev  0x000000000000057f      0x2e4 build/stm32f4xx_hal_uart.o
+ .debug_abbrev  0x0000000000000863      0x28b build/stm32f4xx_hal_rcc.o
+ .debug_abbrev  0x0000000000000aee      0x21a build/stm32f4xx_hal_gpio.o
+ .debug_abbrev  0x0000000000000d08      0x2aa build/stm32f4xx_hal_dma.o
+ .debug_abbrev  0x0000000000000fb2      0x33b build/stm32f4xx_hal_cortex.o
+ .debug_abbrev  0x00000000000012ed      0x1eb build/stm32f4xx_hal.o
+ .debug_abbrev  0x00000000000014d8      0x128 build/system_stm32f4xx.o
+ .debug_abbrev  0x0000000000001600       0x12 build/startup_stm32f407xx.o
+ .debug_abbrev  0x0000000000001612       0xba /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_abbrev  0x00000000000016cc      0x197 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_abbrev  0x0000000000001863       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_abbrev  0x0000000000001877      0x18c /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_abbrev  0x0000000000001a03       0x14 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
 
 .debug_loc      0x0000000000000000     0x52c2
  .debug_loc     0x0000000000000000      0x142 build/main.o
@@ -1345,50 +1345,50 @@ OUTPUT(build/echoTest.elf elf32-littlearm)
  .debug_ranges  0x00000000000005f0       0x20 build/startup_stm32f407xx.o
  .debug_ranges  0x0000000000000610       0xd0 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
 
-.debug_line     0x0000000000000000     0x2e10
- .debug_line    0x0000000000000000      0x2ff build/main.o
- .debug_line    0x00000000000002ff      0x207 build/stm32f4xx_it.o
- .debug_line    0x0000000000000506      0x202 build/stm32f4xx_hal_msp.o
- .debug_line    0x0000000000000708      0xc86 build/stm32f4xx_hal_uart.o
- .debug_line    0x000000000000138e      0x43d build/stm32f4xx_hal_rcc.o
- .debug_line    0x00000000000017cb      0x30e build/stm32f4xx_hal_gpio.o
- .debug_line    0x0000000000001ad9      0x4af build/stm32f4xx_hal_dma.o
- .debug_line    0x0000000000001f88      0x3b6 build/stm32f4xx_hal_cortex.o
- .debug_line    0x000000000000233e      0x388 build/stm32f4xx_hal.o
- .debug_line    0x00000000000026c6      0x174 build/system_stm32f4xx.o
- .debug_line    0x000000000000283a       0x76 build/startup_stm32f407xx.o
- .debug_line    0x00000000000028b0       0xbe /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
- .debug_line    0x000000000000296e      0x17c /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
- .debug_line    0x0000000000002aea       0x67 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
- .debug_line    0x0000000000002b51      0x258 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
- .debug_line    0x0000000000002da9       0x67 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
+.debug_line     0x0000000000000000     0x2dba
+ .debug_line    0x0000000000000000      0x2a9 build/main.o
+ .debug_line    0x00000000000002a9      0x207 build/stm32f4xx_it.o
+ .debug_line    0x00000000000004b0      0x202 build/stm32f4xx_hal_msp.o
+ .debug_line    0x00000000000006b2      0xc86 build/stm32f4xx_hal_uart.o
+ .debug_line    0x0000000000001338      0x43d build/stm32f4xx_hal_rcc.o
+ .debug_line    0x0000000000001775      0x30e build/stm32f4xx_hal_gpio.o
+ .debug_line    0x0000000000001a83      0x4af build/stm32f4xx_hal_dma.o
+ .debug_line    0x0000000000001f32      0x3b6 build/stm32f4xx_hal_cortex.o
+ .debug_line    0x00000000000022e8      0x388 build/stm32f4xx_hal.o
+ .debug_line    0x0000000000002670      0x174 build/system_stm32f4xx.o
+ .debug_line    0x00000000000027e4       0x76 build/startup_stm32f407xx.o
+ .debug_line    0x000000000000285a       0xbe /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+ .debug_line    0x0000000000002918      0x17c /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_line    0x0000000000002a94       0x67 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x0000000000002afb      0x258 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_line    0x0000000000002d53       0x67 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_dvmd_tls.o)
 
-.debug_str      0x0000000000000000     0x35cb
- .debug_str     0x0000000000000000     0x12a6 build/main.o
-                                       0x1389 (size before relaxing)
- .debug_str     0x00000000000012a6       0xdf build/stm32f4xx_it.o
-                                        0x57c (size before relaxing)
- .debug_str     0x0000000000001385       0x79 build/stm32f4xx_hal_msp.o
-                                        0x8b2 (size before relaxing)
- .debug_str     0x00000000000013fe      0x657 build/stm32f4xx_hal_uart.o
-                                        0xdc5 (size before relaxing)
- .debug_str     0x0000000000001a55      0x1a0 build/stm32f4xx_hal_rcc.o
-                                        0x75f (size before relaxing)
- .debug_str     0x0000000000001bf5      0x112 build/stm32f4xx_hal_gpio.o
-                                        0x581 (size before relaxing)
- .debug_str     0x0000000000001d07      0x29b build/stm32f4xx_hal_dma.o
-                                        0x807 (size before relaxing)
- .debug_str     0x0000000000001fa2      0x4df build/stm32f4xx_hal_cortex.o
-                                        0xcbb (size before relaxing)
- .debug_str     0x0000000000002481      0x21f build/stm32f4xx_hal.o
-                                        0xb7c (size before relaxing)
- .debug_str     0x00000000000026a0       0x47 build/system_stm32f4xx.o
-                                        0x3ea (size before relaxing)
- .debug_str     0x00000000000026e7      0x1af /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
+.debug_str      0x0000000000000000     0x3598
+ .debug_str     0x0000000000000000      0xf18 build/main.o
+                                        0xfb6 (size before relaxing)
+ .debug_str     0x0000000000000f18       0xdf build/stm32f4xx_it.o
+                                        0x57e (size before relaxing)
+ .debug_str     0x0000000000000ff7       0x79 build/stm32f4xx_hal_msp.o
+                                        0x8b4 (size before relaxing)
+ .debug_str     0x0000000000001070      0x657 build/stm32f4xx_hal_uart.o
+                                        0xdc7 (size before relaxing)
+ .debug_str     0x00000000000016c7      0x1a0 build/stm32f4xx_hal_rcc.o
+                                        0x761 (size before relaxing)
+ .debug_str     0x0000000000001867      0x112 build/stm32f4xx_hal_gpio.o
+                                        0x583 (size before relaxing)
+ .debug_str     0x0000000000001979      0x29b build/stm32f4xx_hal_dma.o
+                                        0x809 (size before relaxing)
+ .debug_str     0x0000000000001c14      0x4df build/stm32f4xx_hal_cortex.o
+                                        0xcbd (size before relaxing)
+ .debug_str     0x00000000000020f3      0x21f build/stm32f4xx_hal.o
+                                        0xb7e (size before relaxing)
+ .debug_str     0x0000000000002312       0x47 build/system_stm32f4xx.o
+                                        0x3ec (size before relaxing)
+ .debug_str     0x0000000000002359      0x1af /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-init.o)
                                         0x253 (size before relaxing)
- .debug_str     0x0000000000002896      0x134 /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
+ .debug_str     0x0000000000002508      0x48f /usr/lib/gcc/arm-none-eabi/6.3.1/../../../arm-none-eabi/lib/thumb/v7e-m/fpv4-sp/hard/libc_nano.a(lib_a-memset.o)
                                         0x61a (size before relaxing)
- .debug_str     0x00000000000029ca      0xc01 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
+ .debug_str     0x0000000000002997      0xc01 /usr/lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/hard/libgcc.a(_udivmoddi4.o)
                                         0xcf4 (size before relaxing)
 
 .debug_frame    0x0000000000000000     0x1108
