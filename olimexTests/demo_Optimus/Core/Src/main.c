@@ -54,6 +54,8 @@ uint8_t *p;                             // Pointer declaration for the new recei
 uint8_t incomingByte;
 uint8_t incomingBytePrev;
 
+uint8_t buff[10] = {0};
+
 typedef struct{
    uint16_t start;
    int16_t  steer;
@@ -75,6 +77,7 @@ typedef struct{
 } SerialBLDCFeedback;
 SerialBLDCFeedback Feedback;
 SerialBLDCFeedback NewFeedback;
+SerialBLDCFeedback ToPrint;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -94,7 +97,6 @@ void Receive();
 
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-    HAL_UART_Transmit(&huart2, "\r\nByte received ", sizeof("\r\nByte received "), HAL_MAX_DELAY); // Blocking
     //HAL_UART_Transmit(&huart2, &incomingByte, sizeof(incomingByte), HAL_MAX_DELAY); // Blocking
 
     // Since we have received 1byte of data, execute Receive() function to 
@@ -126,48 +128,62 @@ void Send(int16_t uSteer, int16_t uSpeed)
 // ########################## RECEIVE ##########################
 void Receive()
 {
-    if (idx == 0){
-      bufStartFrame	= ((uint16_t)(incomingByte) << 8) | incomingBytePrev;       // Construct the start frame
-    }
-
-    // Copy received data
-    if (bufStartFrame == START_FRAME) {	                    // Initialize if new data is detected
-        p       = (uint8_t *)&NewFeedback;
-        *p++    = incomingBytePrev;
-        *p++    = incomingByte;
-        idx     = 2;	
-    } else if (idx >= 2 && idx < sizeof(SerialBLDCFeedback)) {  // Save the new received data
-        *p++    = incomingByte; 
-        idx++;
-    }	
+  bufStartFrame	= ((uint16_t)(incomingByte) << 8) | incomingBytePrev;       // Construct the start frame
     
-    // Check if we reached the end of the package
-    if (idx == sizeof(SerialBLDCFeedback)) {
-        uint16_t checksum;
-        checksum = (uint16_t)(NewFeedback.start ^ NewFeedback.cmd1 ^ NewFeedback.cmd2 ^ NewFeedback.speedR_meas ^ NewFeedback.speedL_meas
-                            ^ NewFeedback.batVoltage ^ NewFeedback.boardTemp ^ NewFeedback.cmdLed);
+  // if (bufStartFrame == 0xABCD){
+  //   sprintf(buff, "%x\r\n", bufStartFrame);
+  //   HAL_UART_Transmit(&huart2, buff, sizeof(buff), HAL_MAX_DELAY); // Blocking
+  // }
 
-        // Check validity of the new data
-        if (NewFeedback.start == START_FRAME && checksum == NewFeedback.checksum) {
-            // Copy the new data
-            memcpy(&Feedback, &NewFeedback, sizeof(SerialBLDCFeedback));
+  // if (incomingByte == 0XAB && incomingBytePrev == 0xCD){
+  //   sprintf(buff, "%x\r\n", ((uint16_t)(incomingByte) << 8) | incomingBytePrev);
+  //   //sprintf(buff, "%x\r\n", bufStartFrame);
+  //   HAL_UART_Transmit(&huart2, buff, sizeof(buff), HAL_MAX_DELAY); // Blocking
 
-            // Print data to built-in Serial
-            HAL_UART_Transmit(&huart2, &Feedback.cmd1, sizeof(Feedback.cmd1), HAL_MAX_DELAY); // Blocking
-            HAL_UART_Transmit(&huart2, &Feedback.cmd2, sizeof(Feedback.cmd2), HAL_MAX_DELAY); // Blocking
-            HAL_UART_Transmit(&huart2, &Feedback.speedR_meas, sizeof(Feedback.speedR_meas), HAL_MAX_DELAY); // Blocking
-            HAL_UART_Transmit(&huart2, &Feedback.speedL_meas, sizeof(Feedback.speedL_meas), HAL_MAX_DELAY); // Blocking
-            HAL_UART_Transmit(&huart2, &Feedback.batVoltage, sizeof(Feedback.batVoltage), HAL_MAX_DELAY); // Blocking
-            HAL_UART_Transmit(&huart2, &Feedback.boardTemp, sizeof(Feedback.boardTemp), HAL_MAX_DELAY); // Blocking
-            HAL_UART_Transmit(&huart2, &Feedback.cmdLed, sizeof(Feedback.cmdLed), HAL_MAX_DELAY); // Blocking
-        } else {
-            HAL_UART_Transmit(&huart2, "Non-valid data skipped", sizeof("Non-valid data skipped"), HAL_MAX_DELAY); // Blocking
-        }
-        idx = 0;    // Reset the index (it prevents to enter in this if condition in the next cycle)
+  //   if (bufStartFrame == START_FRAME){
+  //     HAL_UART_Transmit(&huart2, "OK\r\n", sizeof("OK\r\n"), HAL_MAX_DELAY); // Blocking
+  //   }
+  // }
+
+  // Copy received data
+  if (bufStartFrame == START_FRAME) {	                    // Initialize if new data is detected
+    //HAL_UART_Transmit(&huart2, "YES\r\n", sizeof("YES\r\n"), HAL_MAX_DELAY); // Blocking
+    p       = (uint8_t *)&NewFeedback;
+    *p++    = incomingBytePrev;
+    *p++    = incomingByte;
+    idx     = 2;	
+  } else if (idx >= 2 && idx < sizeof(SerialBLDCFeedback)) {  // Save the new received data
+    //HAL_UART_Transmit(&huart2, "YES2\r\n", sizeof("YES2\r\n"), HAL_MAX_DELAY); // Blocking
+    *p++    = incomingByte; 
+    idx++;
+  }	
+    
+  // Check if we reached the end of the package
+  if (idx == sizeof(SerialBLDCFeedback)) {
+    // HAL_UART_Transmit(&huart2, "YES2\r\n", sizeof("YES2\r\n"), HAL_MAX_DELAY); // Blocking
+
+    uint16_t checksum;
+    checksum = (uint16_t)(NewFeedback.start ^ NewFeedback.cmd1 ^ NewFeedback.cmd2 ^ NewFeedback.speedR_meas ^ NewFeedback.speedL_meas
+                          ^ NewFeedback.batVoltage ^ NewFeedback.boardTemp ^ NewFeedback.cmdLed);
+
+    // Check validity of the new data
+    if (NewFeedback.start == START_FRAME && checksum == NewFeedback.checksum) {
+      // Copy the new data
+      memcpy(&Feedback, &NewFeedback, sizeof(SerialBLDCFeedback));
+      
+      // sprintf(buff, "CMD1: %d, CMD2: %d, Speed1: %d, Speed2: %d, BatteryVol: %d, BoardTemp: %d\r\n", Feedback.cmd1, Feedback.cmd2,
+      // Feedback.speedR_meas, Feedback.speedL_meas, Feedback.batVoltage, Feedback.boardTemp);
+
+      // // Print data to built-in Serial
+      // HAL_UART_Transmit(&huart2, buff, sizeof(buff), HAL_MAX_DELAY); // Blocking
+    } else {
+      HAL_UART_Transmit(&huart2, "Non-valid data skipped", sizeof("Non-valid data skipped"), HAL_MAX_DELAY); // Blocking
     }
+    idx = 0;    // Reset the index (it prevents to enter in this if condition in the next cycle)
+  }
 
-    // Update previous states
-    incomingBytePrev = incomingByte;
+  // Update previous states
+  incomingBytePrev = incomingByte;
 }
 /* USER CODE END 0 */
 
@@ -211,7 +227,7 @@ int main(void)
 
   // Receive data from UART (1 byte) and store in buffer.
   // HAL_UART_RxCpltCallback will be called when 1 byte has been received.
-  HAL_UART_Receive_DMA (&huart1, &incomingByte, sizeof(incomingByte));
+  HAL_UART_Receive_DMA(&huart1, &incomingByte, sizeof(incomingByte));
 
   HAL_UART_Transmit(&huart2, "Receiving Data\r\n", sizeof("Receiving Data\r\n"), HAL_MAX_DELAY); // Blocking
 
@@ -221,7 +237,14 @@ int main(void)
     HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
     HAL_Delay(50);
 
-    Send(0,1);
+    Send(0,10);
+
+    memcpy(&ToPrint, &Feedback, sizeof(SerialBLDCFeedback));
+
+    sprintf(buff, "%d, %d\r\n",ToPrint.speedR_meas, ToPrint.speedL_meas);
+
+    // Print data to built-in Serial
+    HAL_UART_Transmit(&huart2, buff, sizeof(buff), HAL_MAX_DELAY); // Blocking
 
     /* USER CODE END WHILE */
 
